@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+
+<form method='POST' action='/musics/<%= data.id %>?_method=PUT'>
+  <input name='mood' type='text' value='<%= data.mood %>' />
+  <input name='title' type='text' value='<%= data.title %>' />
+  <input name='artist' type='text' value='<%= data.artist %>' />
+  <input name='genre' type='text' value='<%= data.genre %>' />
+  <input type='submit' value='Edit it!' />
+</form>
+
+<% include ../partials/end %>
