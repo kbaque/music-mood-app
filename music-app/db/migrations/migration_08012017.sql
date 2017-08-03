@@ -1,0 +1,21 @@
+\connect music_dev
+
+CREATE TABLE if NOT EXISTS music (
+id SERIAL PRIMARY KEY,
+mood VARCHAR(225),
+title VARCHAR(225),
+artist VARCHAR(225),
+genre VARCHAR(225)
+);
+
+CREATE TABLE IF NOT EXISTS users (
+ id SERIAL PRIMARY KEY,
+ username VARCHAR(225) UNIQUE NOT NULL,
+ email VARCHAR(225) UNIQUE NOT NULL,
+ password_digest TEXT NOT NULL,
+ firstname VARCHAR(225),
+ lastname VARCHAR(225)
+);
+
+ALTER TABLE mood
+ADD COLUMN user_id INTEGER REFERENCES users(id);
