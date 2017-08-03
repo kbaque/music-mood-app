@@ -17,5 +17,5 @@ CREATE TABLE IF NOT EXISTS users (
  lastname VARCHAR(225)
 );
 
-ALTER TABLE mood
+ALTER TABLE music
 ADD COLUMN user_id INTEGER REFERENCES users(id);
