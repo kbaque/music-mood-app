@@ -32,8 +32,9 @@ musicController.show = (req, res) => {
 
 musicController.create = (req, res) => {
   Music.create({
+    mood: req.body.mood,
     title: req.body.title,
-    year: req.body.year,
+    artist: req.body.artist,
     genre: req.body.genre,
   }, req.user.id).then(() => {
     res.redirect('/musics');
@@ -45,8 +46,9 @@ musicController.create = (req, res) => {
 
 musicController.update = (req, res) => {
   Music.update({
+    mood: req.body.mood,
     title: req.body.title,
-    year: req.body.year,
+    artist: req.body.artist,
     genre: req.body.genre,
   }, req.params.id).then(music => {
     res.redirect(`/musics/${req.params.id}`);
