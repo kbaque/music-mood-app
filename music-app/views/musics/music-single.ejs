@@ -1,0 +1,25 @@
+<% include ../partials/boilerplate %>
+
+<div class='main'>
+</div>
+
+
+  <div class='music-container'>
+    <div class='music'>
+      <h2><%= data.mood %></h2>
+      <h3><%= data.title %></h3>
+      <h3><%= data.artist %></h3>
+      <h3><%= data.genre %></h3>
+      <div class='links'>
+        <a href='/musics/<%= data.id %>/edit'>Edit it!</a>
+        <form method='POST' action='/musics/<%= data.id %>?_method=DELETE'>
+          <input type='submit' value='Delete it!' />
+        </form>
+      </div>
+      </div>
+      <div class='linkback'>
+        <a class='seeall' href='/musics/'>See all music</a>
+      </div>
+    </div>
+
+<% include ../partials/end %>
