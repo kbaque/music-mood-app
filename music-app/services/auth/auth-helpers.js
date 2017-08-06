@@ -6,6 +6,7 @@ function comparePass(userPassword, databasePassword) {
 }
 
 function loginRedirect(req, res, next) {
+  console.log (req.user + "88888888888888888888");
   if (req.user) return res.redirect('/user');
   return next();
 }
