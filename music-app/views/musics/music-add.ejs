@@ -1,11 +1,13 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/nav %>
 
-<form method='POST' action='/musics'>
-  <input name='mood' type='text' placeholder='mood' />
-  <input name='title' type='text' placeholder='title' />
+<p>hey</p>
+<form method="POST" action='/musics/search'>
   <input name='artist' type='text' placeholder='artist' />
-  <input name='genre' type='text' placeholder='genre'>
-  <input type='submit' value='Submit!' />
+  <input name='song' type='text' placeholder='title' />
+  <input type='submit' value='Add!' />
 </form>
+
+
 
 <% include ../partials/end %>

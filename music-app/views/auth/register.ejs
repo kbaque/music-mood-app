@@ -1,13 +1,15 @@
 <% include ../partials/boilerplate %>
 
-<div class='music-container'>
+<div class='register-container'>
   <form method='POST' action='/auth/register'>
-    <input name='username' type='text' placeholder='username' required />
-    <input name='email' type='email' placeholder='email' required />
-    <input name='password' type='password' placeholder='password' required />
-    <input name='firstname' type='text' placeholder='first name' required />
-    <input name='lastname' type='text' placeholder='last name' required />
+   <div id='sign-up'>
+    <input class='member' name='username' type='text' placeholder='username' required />
+    <input class='member' name='email' type='email' placeholder='email' required />
+    <input class='member' name='password' type='password' placeholder='password' required />
+    <input class='member' name='firstname' type='text' placeholder='first name' required />
+    <input class='member' name='lastname' type='text' placeholder='last name' required />
     <input type='submit' value='Register!' />
+   </div>
   </form>
 </div>
 

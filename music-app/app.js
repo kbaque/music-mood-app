@@ -30,7 +30,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-const port = process.env.PORT || 3700;
+const port = process.env.PORT || 3800;
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
@@ -38,7 +38,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
   res.render('index', {
-    message: 'Hello world!',
+    message: '',
     currentPage: 'home',
     documentTitle: 'Music-mood',
   });
@@ -51,6 +51,10 @@ const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
+
+
+// const musicSearchRoutes= require('./routes/search-routes');
+// app.use('/musicSearch', musicSearchRoutes);
 
 app.get('*', (req, res) => {
     res.status(404).send('not found!');

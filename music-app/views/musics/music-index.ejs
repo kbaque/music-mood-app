@@ -1,24 +1,43 @@
 <% include ../partials/boilerplate %>
+<% include ../partials/nav %>
 
-<div class='main'>
-  <h1>All musics</h1>
+<div class='home-container'>
+  <div class=shmood>
+    <p>Shmood!</p>
+  </div>
+<div class='happy'>Happy</div>
+
 </div>
 
-  <div class='music-container'>
+//#home
+
+<div class='music-container'>
     <% for (let music of data) { %>
       <div class='music'>
         <h2><%= music.mood %></h2>
         <h3><%= music.title %></h3>
         <h3><%= music.artist %></h3>
         <h3><%= music.genre %></h3>
+
         <div class='links'>
-          <a class='linkto' href='/musics/<%= music.id%>'>Learn more</a>
+
           <form method='POST' action='/musics/<%= music.id %>?_method=DELETE'>
-            <input type='submit' value='Delete it!' />
+            <input type='submit' value='Delete!' />
           </form>
+
+          <div class='links'>
+        <a href='/musics/<%= music.id %>/edit'>Edit it!</a>
+
+        </form>
+      </div>
+
         </div>
       </div>
     <% } %>
   </div>
 
+
+
 <% include ../partials/end %>
+
+

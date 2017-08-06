@@ -20,7 +20,7 @@ User.create = user => {
 
 User.findUserMusics = id => {
   return db.manyOrNone(`
-    SELECT * FROM musics
+    SELECT * FROM music
     WHERE user_id = $1
   `, [id]);
 };
