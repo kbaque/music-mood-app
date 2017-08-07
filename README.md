@@ -1,6 +1,7 @@
 # music-mood-app
 My project is called Music-mood .
-Its an app that can store your playlist under your mood, that users would be able to download with the API that I'am using.
+
+ Its an app that can store your playlist under your mood, that users would be able to download with the API that I'am using.
 The API that I used is from last.fm it only provides the artist and song. I also used AUTH for my app, the only way you can use the app is by signing up for it.
 
 <form method="POST" action='/musics/search'>
